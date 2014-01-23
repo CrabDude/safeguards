@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 function noSynchronousIO(module) {
   if (require.main !== module) {
     throw new Error('Must call noSynchronousIO at end of main');
@@ -7,7 +9,6 @@ function noSynchronousIO(module) {
     throw new Error('require(\''+name+'\') called after initial tick');
   };
 
-  var fs = require('fs');
   Object.keys(fs).forEach(function (name) {
     // All asyncs have a *Sync counterpart
     name += 'Sync';
