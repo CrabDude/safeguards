@@ -7,5 +7,5 @@ A collection node.js of best practices safeguards
 Safeguards against require or "Sync" IO calls after main tick by replacing them with error throwing equivalents.
 ```javascript
 // THIS MUST BE THE LAST LINE EXECUTED IN THE MAIN MODULE
-return require('safeguards').noSynchronousIO(module, Env.current.featureFlags.noSyncAfterStartup);
+return require('safeguards').noSynchronousIO(module);
 ```
