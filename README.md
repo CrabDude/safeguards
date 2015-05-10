@@ -1,7 +1,7 @@
 safeguards
 ==========
 
-A collection node.js of best practices safeguards
+A collection of node.js best practices safeguards
 
 ## noSynchronousIO
 Safeguards against require or "Sync" IO calls after main tick by replacing them with error throwing equivalents.
